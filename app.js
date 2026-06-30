@@ -46,6 +46,17 @@
     if (!navStack.length) return;
     render(navStack.pop());
   }
+
+  /* ---- mobile nav toggle ---- */
+  const navToggle = $("#navToggle"), navMenu = $("#navMenu"), topnav = $(".topnav");
+  navToggle?.addEventListener("click", () => {
+    const open = topnav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  navMenu?.addEventListener("click", e => {
+    if (e.target.tagName === "A") topnav.classList.remove("open");
+  });
+
   $$(".modtab").forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
   $$("[data-go]").forEach(el => el.addEventListener("click", () => show(el.dataset.go)));
   $("#backBtn")?.addEventListener("click", goBack);
