@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MallOS — Unified Mall Operations Suite | Prototype Showcase</title>
+<meta name="description" content="Interactive app prototype for a 6-floor mall: hotel booking, food ordering & delivery, captain KDS, inventory, GST billing, CRM, QR & AI-powered self-ordering." />
+<link rel="stylesheet" href="app.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="container">
+    <div class="logo"><span class="dot">🏬</span> MallOS</div>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#floors">Floors</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <a href="#prototype" class="btn">Launch Demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero container" id="overview">
+  <span class="badge">⚡ Interactive Prototype · Single Property, One Platform</span>
+  <h1>One operating system for a <span class="grad">6-floor mall</span><br/>hotel · dining · entertainment · retail</h1>
+  <p class="lead">MallOS unifies hotel bookings, food ordering & delivery, captain ordering with kitchen displays, real-time inventory, GST billing, Tally accounting and an AI-powered customer experience — all in one connected suite.</p>
+  <div class="hero-cta">
+    <a href="#prototype" class="btn">▶ Try the live prototype</a>
+    <a href="#modules" class="btn ghost">Explore modules</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>6</b><span>Floors managed</span></div>
+    <div class="stat"><b>24</b><span>Hotel rooms</span></div>
+    <div class="stat"><b>5+</b><span>Dining outlets</span></div>
+    <div class="stat"><b>12</b><span>Core modules</span></div>
+  </div>
+</header>
+
+<!-- FLOORS -->
+<section class="section container" id="floors">
+  <span class="eyebrow">Property Map</span>
+  <h2>Every floor, digitally connected</h2>
+  <p class="sub">The platform models the real building — each zone runs the modules it needs while sharing one customer database and one billing engine.</p>
+  <div class="floors">
+    <div class="floor soon"><div class="lvl">RT</div><div><h4>Rooftop · Dining 🍽️</h4><p>Rooftop restaurant + 4–5 specialty outlets</p></div><span class="tag">QR · Self-order · KDS</span></div>
+    <div class="floor"><div class="lvl">5F</div><div><h4>Hospitality 🥂</h4><p>Large bar · banquet halls</p></div><span class="tag">Banquets · Bar POS</span></div>
+    <div class="floor"><div class="lvl">4F</div><div><h4>Hospitality 🛎️</h4><p>24 hotel rooms · banquet halls</p></div><span class="tag">Booking · Housekeeping</span></div>
+    <div class="floor"><div class="lvl">3F</div><div><h4>Entertainment 🎬</h4><p>Cinema hall · cafeteria · disco bar</p></div><span class="tag">Cinema booking · Cross-sell</span></div>
+    <div class="floor"><div class="lvl">2F</div><div><h4>Retail 🛍️</h4><p>Branded showrooms (leased)</p></div><span class="tag">Outlet tax slabs</span></div>
+    <div class="floor"><div class="lvl">1F</div><div><h4>Retail 🛍️</h4><p>Branded showrooms (leased)</p></div><span class="tag">Outlet tax slabs</span></div>
+    <div class="floor"><div class="lvl">GF</div><div><h4>Retail 🛍️</h4><p>Branded showrooms (leased)</p></div><span class="tag">Footfall analytics</span></div>
+    <div class="floor soon"><div class="lvl">＋</div><div><h4>Future Expansion 🏋️</h4><p>Gym &amp; swimming pool — membership ready</p></div><span class="tag">Coming soon</span></div>
+  </div>
+</section>
+
+<!-- PROTOTYPE -->
+<section class="section container" id="prototype">
+  <span class="eyebrow">Live Prototype</span>
+  <h2>Tap through the customer &amp; staff app</h2>
+  <p class="sub">A working, clickable demo. Pick a module on the left and interact with the screen — book a room, search the menu with AI, scan-to-order, watch the kitchen display update, and generate a GST bill.</p>
+
+  <div class="proto">
+    <div class="proto-side">
+      <h3>Module switcher</h3>
+      <p>Choose any flow to load it into the device.</p>
+      <div class="modtabs" id="modtabs">
+        <button class="modtab active" data-v="home"><span class="e">🏠</span> Home dashboard</button>
+        <button class="modtab" data-v="hotel"><span class="e">🛎️</span> Hotel room booking</button>
+        <button class="modtab" data-v="qr"><span class="e">📱</span> QR table ordering</button>
+        <button class="modtab" data-v="ai"><span class="e">🤖</span> AI menu search</button>
+        <button class="modtab" data-v="self"><span class="e">🛒</span> Self-order + live stock</button>
+        <button class="modtab" data-v="kds"><span class="e">👨‍🍳</span> Captain → Kitchen (KDS)</button>
+        <button class="modtab" data-v="bill"><span class="e">🧾</span> GST billing</button>
+        <button class="modtab" data-v="crm"><span class="e">🎁</span> CRM &amp; cross-promo</button>
+        <button class="modtab" data-v="inv"><span class="e">📦</span> Inventory</button>
+      </div>
+    </div>
+
+    <!-- DEVICE -->
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="screen">
+        <div class="sbar"><span>9:41</span><span>5G · 100% 🔋</span></div>
+        <div class="appbar">
+          <div class="t" id="appTitle">MallOS</div>
+          <div class="av"></div>
+        </div>
+        <div class="scrollarea">
+
+          <!-- HOME -->
+          <div class="view active" data-view="home">
+            <div class="pcard" style="background:linear-gradient(135deg,rgba(99,102,241,.3),rgba(34,211,238,.15))">
+              <h5>Welcome, Nityam 👋 <span class="pill">Prime</span></h5>
+              <small>Pinnacle Mall · 6 floors at your fingertips</small>
+            </div>
+            <div class="sectiontitle">Quick actions</div>
+            <div class="roomgrid" style="grid-template-columns:repeat(3,1fr)">
+              <div class="pcard" style="text-align:center;cursor:pointer" data-go="hotel"><div style="font-size:1.5rem">🛎️</div><small>Book room</small></div>
+              <div class="pcard" style="text-align:center;cursor:pointer" data-go="qr"><div style="font-size:1.5rem">📱</div><small>Order food</small></div>
+              <div class="pcard" style="text-align:center;cursor:pointer" data-go="ai"><div style="font-size:1.5rem">🤖</div><small>AI search</small></div>
+              <div class="pcard" style="text-align:center;cursor:pointer" data-go="crm"><div style="font-size:1.5rem">🎁</div><small>Offers</small></div>
+              <div class="pcard" style="text-align:center;cursor:pointer" data-go="bill"><div style="font-size:1.5rem">🧾</div><small>My bill</small></div>
+              <div class="pcard" style="text-align:center;cursor:pointer" data-go="self"><div style="font-size:1.5rem">🛒</div><small>Self order</small></div>
+            </div>
+            <div class="sectiontitle">Happening today</div>
+            <div class="pcard"><div class="row"><span>🎬 Cinema: 7:30 PM show</span><span class="pill">-20%</span></div><small>Hotel-guest discount applied automatically</small></div>
+            <div class="pcard"><div class="row"><span>🎉 New Year Gala — Rooftop</span><span class="pill warn">Few seats</span></div><small>Tap to reserve a banquet table</small></div>
+          </div>
+
+          <!-- HOTEL -->
+          <div class="view" data-view="hotel">
+            <div class="sectiontitle">Online room booking · 24 rooms</div>
+            <div class="row" style="gap:.5rem">
+              <input class="input" id="hCheckin" type="date" />
+              <input class="input" id="hNights" type="number" min="1" value="2" title="Nights" />
+            </div>
+            <div class="sectiontitle">Select a room (green = free)</div>
+            <div class="roomgrid" id="roomGrid"></div>
+            <div class="pcard" style="margin-top:.6rem">
+              <div class="gstline"><span>Room <b id="hRoomNo">—</b> · <span id="hNightsLbl">2</span> nights</span><span id="hRate">₹0</span></div>
+              <div class="gstline"><span>GST (12%)</span><span id="hGst">₹0</span></div>
+              <div class="gstline total"><span>Total</span><span id="hTotal">₹0</span></div>
+              <button class="mini-btn" id="hBook" style="width:100%;margin-top:.6rem" disabled>Confirm &amp; pay</button>
+            </div>
+          </div>
+
+          <!-- QR -->
+          <div class="view" data-view="qr">
+            <div class="sectiontitle">Scan to order — Table 12, Rooftop</div>
+            <div class="qrbox" id="qrbox"></div>
+            <p style="text-align:center;color:var(--muted);font-size:.82rem">No menu cards needed. Scan the table-top QR to open the live menu.</p>
+            <button class="mini-btn" id="qrScan" style="width:100%">Simulate scan ➜ open menu</button>
+          </div>
+
+          <!-- AI -->
+          <div class="view" data-view="ai">
+            <div class="sectiontitle">🤖 AI menu search</div>
+            <input class="input" id="aiInput" placeholder="Try: spicy veg, something light, paneer…" />
+            <div class="chips" style="margin:.6rem 0">
+              <span class="chip" data-q="spicy">spicy</span>
+              <span class="chip" data-q="veg">veg</span>
+              <span class="chip" data-q="dessert">dessert</span>
+              <span class="chip" data-q="under 300">under 300</span>
+              <span class="chip" data-q="paneer">paneer</span>
+            </div>
+            <div id="aiResults"></div>
+          </div>
+
+          <!-- SELF ORDER -->
+          <div class="view" data-view="self">
+            <div class="sectiontitle">Automated self-ordering · live stock</div>
+            <div id="menuList"></div>
+            <div class="pcard" style="position:sticky;bottom:0">
+              <div class="row"><span>Cart: <b id="cartCount">0</b> items</span><span class="bignum" id="cartTotal">₹0</span></div>
+              <button class="mini-btn" id="placeOrder" style="width:100%;margin-top:.5rem" disabled>Place order</button>
+            </div>
+          </div>
+
+          <!-- KDS -->
+          <div class="view" data-view="kds">
+            <div class="sectiontitle">Captain order ➜ Kitchen Display</div>
+            <div class="pcard">
+              <div class="row"><span>Table 12 · Captain Ravi</span><button class="mini-btn" id="punch">Punch order</button></div>
+              <small>Tap to send a captain order to the kitchen screen</small>
+            </div>
+            <div class="sectiontitle">Kitchen Display System</div>
+            <div id="kdsList"></div>
+          </div>
+
+          <!-- BILL -->
+          <div class="view" data-view="bill">
+            <div class="sectiontitle">Automated invoice · auto-GST</div>
+            <div class="pcard">
+              <div class="tablerow"><span>Paneer Tikka ×1</span><span>₹280</span></div>
+              <div class="tablerow"><span>Veg Biryani ×1</span><span>₹240</span></div>
+              <div class="tablerow"><span>Cold Coffee ×2</span><span>₹240</span></div>
+              <div class="gstline" style="margin-top:.5rem"><span>Subtotal</span><span>₹760</span></div>
+              <div class="gstline"><span>CGST 2.5%</span><span>₹19.00</span></div>
+              <div class="gstline"><span>SGST 2.5%</span><span>₹19.00</span></div>
+              <div class="gstline total"><span>Grand total</span><span>₹798.00</span></div>
+              <div class="flexbtns" style="margin-top:.6rem">
+                <button class="mini-btn" id="payBtn" style="flex:1">Pay now</button>
+                <button class="mini-btn sec" id="tallyBtn" style="flex:1">Post to Tally</button>
+              </div>
+              <small style="display:block;margin-top:.5rem">GST E-invoice + Tally export generated automatically.</small>
+            </div>
+          </div>
+
+          <!-- CRM -->
+          <div class="view" data-view="crm">
+            <div class="sectiontitle">Customer 360 &amp; cross-promotions</div>
+            <div class="pcard">
+              <h5>Nityam K. Tiwari <span class="pill">VIP · 14 visits</span></h5>
+              <small>🎂 Birthday: 25 Mar · 💍 Anniversary: 12 Nov</small>
+            </div>
+            <div class="sectiontitle">System-suggested cross-sells</div>
+            <div class="pcard"><div class="row"><span>🛏️ Hotel guest → 🎬 Cinema</span><span class="pill">-20%</span></div></div>
+            <div class="pcard"><div class="row"><span>🍽️ Diner → 🥂 Disco bar entry</span><span class="pill">Free</span></div></div>
+            <div class="sectiontitle">Campaigns &amp; coupons</div>
+            <div class="pcard"><div class="row"><span>🎄 Christmas offer blast</span><button class="mini-btn" id="sendCampaign">Send</button></div></div>
+            <div class="pcard"><div class="row"><span>🎟️ Generate coupon</span><button class="mini-btn sec" id="genCoupon">Create</button></div><small id="couponOut" style="color:var(--accent3)"></small></div>
+          </div>
+
+          <!-- INVENTORY -->
+          <div class="view" data-view="inv">
+            <div class="sectiontitle">Real-time kitchen &amp; dept inventory</div>
+            <div class="pcard"><div class="row"><span>Paneer</span><span id="invPaneerTxt">8.0 kg</span></div><div class="bar"><i id="invPaneer" style="width:80%"></i></div></div>
+            <div class="pcard"><div class="row"><span>Basmati rice</span><span>22.0 kg</span></div><div class="bar"><i style="width:90%"></i></div></div>
+            <div class="pcard"><div class="row"><span>Coffee beans</span><span class="pill warn">Low · 1.2 kg</span></div><div class="bar"><i style="width:18%"></i></div></div>
+            <div class="pcard"><div class="row"><span>Soft drinks</span><span class="pill off">Out</span></div><div class="bar"><i style="width:4%"></i></div></div>
+            <small>Stock auto-deducts on every confirmed order. Low items trigger purchase alerts.</small>
+          </div>
+
+        </div>
+        <div class="toast" id="toast"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="section container" id="modules">
+  <span class="eyebrow">Capabilities</span>
+  <h2>Everything the brief asks for</h2>
+  <p class="sub">Mapped directly from the project requirements — operations, CRM/marketing and the AI experience layer.</p>
+  <div class="grid">
+    <div class="fcard"><div class="ic">🛎️</div><h4>Hotel Management</h4><p>Online booking engine for all 24 rooms with live availability, self check-in and housekeeping dashboard.</p></div>
+    <div class="fcard"><div class="ic">🍔</div><h4>Food Ordering &amp; Delivery</h4><p>Dedicated ordering for prime customers plus Zomato &amp; third-party aggregator integration.</p></div>
+    <div class="fcard"><div class="ic">📲</div><h4>Captain Order System</h4><p>Tablet ordering with table QR; orders flow straight to kitchen display screens (KDS).</p></div>
+    <div class="fcard"><div class="ic">📦</div><h4>Inventory Management</h4><p>Real-time kitchen stock and department-wise inventory, usage, wastage &amp; auto-purchase alerts.</p></div>
+    <div class="fcard"><div class="ic">🧾</div><h4>Billing &amp; GST</h4><p>Automated invoicing with auto GST calculation, split invoices and GST e-invoicing.</p></div>
+    <div class="fcard"><div class="ic">📊</div><h4>Tally Accounting</h4><p>Seamless import of sales, purchase and stock into Tally with verify-only posting.</p></div>
+    <div class="fcard"><div class="ic">🎉</div><h4>Event Offers</h4><p>Manage New Year, Christmas &amp; festival campaigns with targeted offers.</p></div>
+    <div class="fcard"><div class="ic">🎟️</div><h4>Coupon Sales</h4><p>Generate and manually sell promotional coupons with redemption tracking.</p></div>
+    <div class="fcard"><div class="ic">🎂</div><h4>Customer Reminders</h4><p>Automated WhatsApp/SMS/email for birthdays, anniversaries &amp; special dates.</p></div>
+    <div class="fcard"><div class="ic">🗂️</div><h4>Customer Database</h4><p>Centralized 360° profile tracking past visits, spend and preferences.</p></div>
+    <div class="fcard"><div class="ic">🔀</div><h4>Cross-Promotions</h4><p>System suggests cross-sells — e.g. a cinema discount pushed to a hotel guest.</p></div>
+    <div class="fcard"><div class="ic">🤖</div><h4>AI Experience</h4><p>QR ordering, AI dish search and fully automated self-ordering with live stock &amp; pricing.</p></div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="section container">
+  <span class="eyebrow">How it fits together</span>
+  <h2>Connected architecture</h2>
+  <p class="sub">One customer identity and one data core power every touchpoint, from guest phone to kitchen line to the finance desk.</p>
+  <div class="arch">
+    <div class="node"><div class="e">📱</div><b>Guest Apps</b><span>QR · self-order · booking</span></div>
+    <div class="node"><div class="e">🖥️</div><b>Staff &amp; Captain</b><span>Tablets · KDS · POS</span></div>
+    <div class="node"><div class="e">🧠</div><b>MallOS Core</b><span>Orders · CRM · stock</span></div>
+    <div class="node"><div class="e">🔌</div><b>Integrations</b><span>Zomato · WhatsApp · Pine Labs</span></div>
+    <div class="node"><div class="e">📚</div><b>Tally &amp; GST</b><span>Auto invoicing &amp; books</span></div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section container" id="roadmap">
+  <span class="eyebrow">Delivery plan</span>
+  <h2>Phased rollout</h2>
+  <p class="sub">A pragmatic sequence — get revenue-critical operations live first, then layer on the AI experience and future amenities.</p>
+  <div class="timeline">
+    <div class="phase"><div class="p">Phase 1<br/><small>0–3 mo</small></div><div><h4>Core operations</h4><p>Hotel booking, F&amp;B billing with GST, captain orders + KDS, inventory and Tally integration.</p></div></div>
+    <div class="phase"><div class="p">Phase 2<br/><small>3–5 mo</small></div><div><h4>CRM &amp; marketing</h4><p>Customer database, reminders, event offers, coupons and cross-promotions across floors.</p></div></div>
+    <div class="phase"><div class="p">Phase 3<br/><small>5–8 mo</small></div><div><h4>AI customer experience</h4><p>QR table ordering, AI menu search and fully automated self-ordering with live stock checks.</p></div></div>
+    <div class="phase"><div class="p">Phase 4<br/><small>8 mo+</small></div><div><h4>Future amenities</h4><p>Gym &amp; swimming-pool memberships, loyalty expansion and advanced analytics.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="logo" style="justify-content:center;margin-bottom:.6rem"><span class="dot">🏬</span> MallOS</div>
+    <p>Interactive prototype · Unified operations suite for a 6-floor mall.</p>
+    <p style="margin-top:.4rem">Built &amp; hosted on GitHub Pages · <a href="index.html">← Back to home</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
