@@ -22,17 +22,33 @@
     toastT = setTimeout(() => t.classList.remove("show"), 2200);
   }
 
-  /* ---- view switching ---- */
-  function show(view) {
+  /* ---- view switching with back history ---- */
+  let currentView = "home";
+  const navStack = [];
+
+  function render(view) {
+    currentView = view;
     $$(".view").forEach(v => v.classList.toggle("active", v.dataset.view === view));
     $$(".modtab").forEach(b => b.classList.toggle("active", b.dataset.v === view));
     const title = $("#appTitle");
     if (title) title.textContent = titles[view] || "MallOS";
+    const back = $("#backBtn");
+    if (back) back.hidden = navStack.length === 0;
     const area = $(".scrollarea");
     if (area) area.scrollTop = 0;
   }
+  function show(view) {
+    if (view === currentView) return;
+    navStack.push(currentView);
+    render(view);
+  }
+  function goBack() {
+    if (!navStack.length) return;
+    render(navStack.pop());
+  }
   $$(".modtab").forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
   $$("[data-go]").forEach(el => el.addEventListener("click", () => show(el.dataset.go)));
+  $("#backBtn")?.addEventListener("click", goBack);
 
   /* ============ HOTEL BOOKING ============ */
   const busyRooms = new Set([102, 105, 110, 203, 207, 212, 215, 220]);
