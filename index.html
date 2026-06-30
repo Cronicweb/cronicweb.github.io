@@ -4,20 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pinnacle Mall | MallOS — Unified Operations Suite</title>
-<meta name="description" content="MallOS — an interactive app prototype for a 6-floor mall: hotel booking, food ordering & delivery, captain KDS, inventory, GST billing, CRM and AI-powered self-ordering." />
+<meta name="description" content="Pinnacle Mall runs on MallOS — an interactive app prototype for a 6-floor mall: hotel booking, food ordering & delivery, captain KDS, inventory, GST billing, CRM and AI-powered self-ordering." />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
 
 <nav class="topnav">
   <div class="container">
-    <div class="logo"><span class="dot">🏬</span> Pinnacle Mall</div>
-    <ul>
+    <div class="logo"><span class="dot">🏬</span> Pinnacle Mall <span class="logo-sub">MallOS</span></div>
+    <button class="navtoggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+    <ul id="navMenu">
       <li><a href="#featured">Project</a></li>
       <li><a href="prototype.html">Prototype</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="prototype.html" class="btn">Open MallOS ▶</a>
+    <a href="prototype.html" class="btn navcta">Open MallOS ▶</a>
   </div>
 </nav>
 
@@ -34,7 +35,7 @@
 <section class="section container" id="featured">
   <span class="eyebrow">The Platform</span>
   <h2>MallOS — Unified Mall Operations Suite</h2>
-  <p class="sub">A clickable prototype for a 6-floor mall covering hotel booking, food ordering & delivery, captain ordering with kitchen displays, real-time inventory, automated GST billing, Tally accounting, CRM with cross-promotions, and an AI-powered customer experience.</p>
+  <p class="sub">A clickable prototype for Pinnacle Mall, a 6-floor property — covering hotel booking, food ordering &amp; delivery, captain ordering with kitchen displays, real-time inventory, automated GST billing, Tally accounting, CRM with cross-promotions, and an AI-powered customer experience.</p>
 
   <div class="grid">
     <div class="fcard"><div class="ic">🛎️</div><h4>Hotel &amp; Hospitality</h4><p>Online booking for 24 rooms, banquets, bar and housekeeping.</p></div>
@@ -56,11 +57,21 @@
 
 <footer>
   <div class="container">
-    <div class="logo" style="justify-content:center;margin-bottom:.6rem"><span class="dot">🏬</span> Pinnacle Mall</div>
+    <div class="logo" style="justify-content:center;margin-bottom:.6rem"><span class="dot">🏬</span> Pinnacle Mall <span class="logo-sub">MallOS</span></div>
     <p>&copy; <span id="yr"></span> Pinnacle Mall · Powered by MallOS · Hosted on GitHub Pages.</p>
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var nt = document.getElementById('navToggle'), nm = document.getElementById('navMenu');
+  nt && nt.addEventListener('click', function () {
+    var open = document.querySelector('.topnav').classList.toggle('open');
+    nt.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nm && nm.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') document.querySelector('.topnav').classList.remove('open');
+  });
+</script>
 </body>
 </html>
