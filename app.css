@@ -20,9 +20,13 @@ a{color:var(--accent2);text-decoration:none}
 .topnav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.3px}
 .logo .dot{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:1rem}
+.logo-sub{font-size:.7rem;font-weight:600;color:var(--accent2);border:1px solid var(--line);
+  padding:.1rem .45rem;border-radius:999px;letter-spacing:.5px}
 .topnav ul{display:flex;gap:1.4rem;list-style:none}
 .topnav ul a{color:var(--muted);font-size:.92rem;font-weight:500}
 .topnav ul a:hover{color:var(--text)}
+.navtoggle{display:none;background:var(--panel);border:1px solid var(--line);color:var(--text);
+  font-size:1.2rem;line-height:1;width:42px;height:40px;border-radius:10px;cursor:pointer}
 .btn{display:inline-block;background:var(--grad);color:#06122a;font-weight:700;
   padding:.7rem 1.3rem;border-radius:999px;border:0;cursor:pointer;transition:.15s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(99,102,241,.35)}
@@ -81,7 +85,7 @@ a{color:var(--accent2);text-decoration:none}
 .modtab .e{font-size:1.2rem}
 
 /* PHONE */
-.phone{width:330px;height:680px;background:#05080f;border:10px solid #1a2138;border-radius:42px;
+.phone{width:330px;max-width:100%;aspect-ratio:33/68;background:#05080f;border:10px solid #1a2138;border-radius:42px;
   position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5);overflow:hidden}
 .phone .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:130px;height:26px;
   background:#1a2138;border-radius:0 0 16px 16px;z-index:5}
@@ -157,3 +161,44 @@ a{color:var(--accent2);text-decoration:none}
 footer{border-top:1px solid var(--line);padding:2.5rem 0;text-align:center;color:var(--muted);margin-top:3rem}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
 .chip{font-size:.74rem;color:var(--muted);border:1px solid var(--line);padding:.25rem .7rem;border-radius:999px;cursor:pointer}
+
+/* ===================== MOBILE ===================== */
+@media(max-width:760px){
+  .topnav .container{flex-wrap:wrap;height:auto;padding-top:.7rem;padding-bottom:.7rem;gap:.6rem}
+  .navtoggle{display:block;order:2;margin-left:auto}
+  .logo{order:1}
+  .navcta{order:3}
+  .logo-sub{display:none}
+  .topnav ul{order:4;flex-basis:100%;flex-direction:column;gap:0;
+    max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .topnav.open ul{max-height:340px}
+  .topnav ul li{border-top:1px solid var(--line)}
+  .topnav ul a{display:block;padding:.85rem .2rem;font-size:1rem}
+  .btn{padding:.55rem 1rem;font-size:.9rem}
+
+  .hero{padding:3rem 0 2rem}
+  .hero p.lead{font-size:1rem}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%}
+  .stats{gap:1.4rem 2rem;margin-top:2rem}
+
+  .section{padding:2.6rem 0}
+  .section h2{font-size:1.55rem}
+
+  .proto{gap:1.6rem}
+  .proto-side h3{font-size:1.25rem}
+
+  .floor{grid-template-columns:48px 1fr;gap:.5rem 1rem;padding:.85rem 1rem}
+  .floor:hover{transform:none}
+  .floor .tag{grid-column:1 / -1;justify-self:start;margin-top:.2rem}
+
+  .phase{grid-template-columns:1fr;gap:.4rem}
+  .phase .p{font-size:.95rem}
+}
+
+@media(max-width:420px){
+  .container{padding:0 1rem}
+  .hero h1{font-size:1.9rem}
+  .stat b{font-size:1.5rem}
+  .modtab{font-size:.88rem;padding:.7rem .8rem}
+}
