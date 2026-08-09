@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 620" role="img" aria-label="Lumen Watch Ultra">
+  <defs>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f2a3a"/><stop offset=".5" stop-color="#33455e"/><stop offset="1" stop-color="#1a2432"/>
+    </linearGradient>
+    <linearGradient id="case" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0b25a"/><stop offset=".35" stop-color="#c78a3c"/>
+      <stop offset=".7" stop-color="#f5d08a"/><stop offset="1" stop-color="#a9702c"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06131f"/><stop offset=".6" stop-color="#0b2f3f"/><stop offset="1" stop-color="#12694f"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M150 18h160v150H150z" fill="url(#band)"/>
+  <path d="M150 452h160v150H150z" fill="url(#band)"/>
+  <rect x="146" y="10" width="168" height="26" rx="13" fill="#0f1620"/>
+  <rect x="146" y="584" width="168" height="26" rx="13" fill="#0f1620"/>
+
+  <rect x="118" y="128" width="224" height="364" rx="72" fill="url(#case)"/>
+  <rect x="132" y="142" width="196" height="336" rx="62" fill="#05070a"/>
+  <rect x="142" y="152" width="176" height="316" rx="54" fill="url(#face)"/>
+
+  <g font-family="-apple-system, Helvetica, Arial, sans-serif" fill="#eafff7">
+    <text x="230" y="262" text-anchor="middle" font-size="76" font-weight="600" letter-spacing="-2">9:41</text>
+    <text x="230" y="300" text-anchor="middle" font-size="20" opacity=".7">SAT 9 AUG</text>
+  </g>
+  <g fill="none" stroke-width="9" stroke-linecap="round">
+    <circle cx="188" cy="384" r="34" stroke="#0d4b3a"/>
+    <circle cx="188" cy="384" r="34" stroke="#34e7a4" stroke-dasharray="160 214" transform="rotate(-90 188 384)"/>
+    <circle cx="272" cy="384" r="34" stroke="#4a2233"/>
+    <circle cx="272" cy="384" r="34" stroke="#ff5d8f" stroke-dasharray="120 214" transform="rotate(-90 272 384)"/>
+  </g>
+
+  <rect x="340" y="228" width="16" height="54" rx="8" fill="#8a5f22"/>
+  <rect x="340" y="300" width="16" height="34" rx="8" fill="#8a5f22"/>
+  <rect x="104" y="262" width="14" height="46" rx="7" fill="#e8a447"/>
+</svg>

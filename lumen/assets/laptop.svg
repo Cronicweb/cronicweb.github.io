@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="LumenBook Air laptop, open">
+  <defs>
+    <linearGradient id="lid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9dbe0"/><stop offset=".5" stop-color="#b7bac2"/><stop offset="1" stop-color="#8e929c"/>
+    </linearGradient>
+    <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c6c9d0"/><stop offset="1" stop-color="#9a9ea8"/>
+    </linearGradient>
+    <linearGradient id="disp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#04122b"/><stop offset=".45" stop-color="#123a6b"/>
+      <stop offset=".78" stop-color="#2a7fa8"/><stop offset="1" stop-color="#7fe3d0"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".18"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- lid -->
+  <rect x="150" y="30" width="900" height="580" rx="26" fill="url(#lid)"/>
+  <rect x="166" y="46" width="868" height="536" rx="16" fill="#0a0a0c"/>
+  <rect x="182" y="70" width="836" height="492" rx="8" fill="url(#disp)"/>
+  <rect x="182" y="70" width="836" height="492" rx="8" fill="url(#shine)"/>
+  <circle cx="600" cy="58" r="4" fill="#1b1b1f"/>
+
+  <!-- window chrome on screen -->
+  <g opacity=".9">
+    <rect x="230" y="118" width="500" height="330" rx="12" fill="#ffffff" fill-opacity=".10"/>
+    <rect x="230" y="118" width="500" height="34" rx="12" fill="#ffffff" fill-opacity=".16"/>
+    <circle cx="252" cy="135" r="5.5" fill="#ff5f57"/><circle cx="272" cy="135" r="5.5" fill="#febc2e"/><circle cx="292" cy="135" r="5.5" fill="#28c840"/>
+    <g fill="#fff" fill-opacity=".5">
+      <rect x="252" y="176" width="180" height="10" rx="5"/>
+      <rect x="252" y="200" width="300" height="10" rx="5"/>
+      <rect x="252" y="224" width="240" height="10" rx="5"/>
+    </g>
+    <g fill="#7fe3d0" fill-opacity=".85">
+      <rect x="252" y="300" width="34" height="110" rx="6"/>
+      <rect x="300" y="336" width="34" height="74" rx="6"/>
+      <rect x="348" y="270" width="34" height="140" rx="6"/>
+      <rect x="396" y="318" width="34" height="92" rx="6"/>
+      <rect x="444" y="248" width="34" height="162" rx="6"/>
+    </g>
+    <rect x="756" y="150" width="220" height="270" rx="14" fill="#ffffff" fill-opacity=".08"/>
+  </g>
+
+  <!-- deck -->
+  <path d="M60 614h1080l38 78a14 14 0 0 1-13 20H35a14 14 0 0 1-13-20Z" fill="url(#deck)"/>
+  <rect x="500" y="618" width="200" height="12" rx="6" fill="#7c8089"/>
+  <ellipse cx="600" cy="726" rx="470" ry="12" fill="#000" opacity=".12"/>
+</svg>
